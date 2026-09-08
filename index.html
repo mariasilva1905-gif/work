@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINZ | Motors & Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navbar -->
+    <header class="navbar">
+        <div class="logo">TWIN<span>Z</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato" class="btn-nav">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>O ENCONTRO ENTRE O <span>CLÁSSICO</span> E O <span>FUTURO</span></h1>
+            <p>Especialistas em restauração de relíquias antigas e personalização de hipercarros modernos.</p>
+            <a href="#catalogo" class="btn-main">Explorar Coleção</a>
+        </div>
+    </section>
+
+    <!-- Seção do Catálogo -->
+    <section id="catalogo" class="catalog-container">
+        <h2>Nossa Garagem</h2>
+        <div class="subtitle-line"></div>
+
+        <!-- Filtros -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="antigo">Carros Antigos</button>
+            <button class="filter-btn" data-filter="moderno">Carros Modernos</button>
+        </div>
+
+        <!-- Grid de Carros -->
+        <div class="car-grid">
+            
+            <!-- Carro 1 (Antigo) -->
+            <div class="car-card" data-category="antigo">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Carro Antigo Clássico">
+                    <span class="badge antigo">Clássico</span>
+                </div>
+                <div class="card-info">
+                    <h3>Chevrolet Corvette C1</h3>
+                    <p class="year">Ano: 1958</p>
+                    <p class="price">R$ 450.000</p>
+                    <button class="btn-card" onclick="openModal('Chevrolet Corvette C1 (1958)', 'Motor V8 de época totalmente restaurado, acabamento impecável em couro e detalhes cromados originais.', 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 2 (Moderno) -->
+            <div class="car-card" data-category="moderno">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Carro Esportivo Moderno">
+                    <span class="badge moderno">Hipercarro</span>
+                </div>
+                <div class="card-info">
+                    <h3>Porsche 911 GT3 RS</h3>
+                    <p class="year">Ano: 2023</p>
+                    <p class="price">R$ 2.100.000</p>
+                    <button class="btn-card" onclick="openModal('Porsche 911 GT3 RS (2023)', 'Aerodinâmica extrema, motor 4.0 de 525cv aspirado, pronto para pistas e estradas.', 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 3 (Antigo) -->
+            <div class="car-card" data-category="antigo">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Ferrari Antiga">
+                    <span class="badge antigo">Clássico</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ferrari 250 GTO Style</h3>
+                    <p class="year">Ano: 1965</p>
+                    <p class="price">R$ 1.200.000</p>
+                    <button class="btn-card" onclick="openModal('Ferrari 250 GTO Style (1965)', 'Uma obra de arte italiana. Design atemporal e um som de motor inconfundível.', 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 4 (Moderno) -->
+            <div class="car-card" data-category="moderno">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="Mercedes AMG">
+                    <span class="badge moderno">Hipercarro</span>
+                </div>
+                <div class="card-info">
+                    <h3>Mercedes-AMG GT R</h3>
+                    <p class="year">Ano: 2022</p>
+                    <p class="price">R$ 1.850.000</p>
+                    <button class="btn-card" onclick="openModal('Mercedes-AMG GT R (2022)', 'Motor V8 Biturbo, alta tecnologia alemã e desempenho avassalador.', 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 5 (Antigo) -->
+            <div class="car-card" data-category="antigo">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Porsche Clássico">
+                    <span class="badge antigo">Clássico</span>
+                </div>
+                <div class="card-info">
+                    <h3>Porsche 911 Carrera</h3>
+                    <p class="year">Ano: 1978</p>
+                    <p class="price">R$ 580.000</p>
+                    <button class="btn-card" onclick="openModal('Porsche 911 Carrera (1978)', 'Lendário motor Boxer arrefecido a ar. O puro sentimento de pilotagem vintage.', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 6 (Moderno) -->
+            <div class="car-card" data-category="moderno">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Lamborghini Moderno">
+                    <span class="badge moderno">Hipercarro</span>
+                </div>
+                <div class="card-info">
+                    <h3>Lamborghini Huracán</h3>
+                    <p class="year">Ano: 2024</p>
+                    <p class="price">R$ 3.400.000</p>
+                    <button class="btn-card" onclick="openModal('Lamborghini Huracán (2024)', 'Design agressivo com tração integral e motor V10 puramente aspirado.', 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80')">Ver Detalhes</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes -->
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Imagem do Carro">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 TWINZ Motors. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
